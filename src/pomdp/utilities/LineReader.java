@@ -5,6 +5,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * ¶ÁÊý¾ÝÓÃ
+ */
 public class LineReader{
 	BufferedReader m_fosInput;
 	public LineReader( String sFileName ) throws IOException{

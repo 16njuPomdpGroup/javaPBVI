@@ -8,6 +8,9 @@ import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 对过程进行记录和输出
+ */
 public class Logger {
 	private int m_iMaximalLevel;
 	private static Map<Long,Logger> m_mInstances = new HashMap<Long,Logger>();

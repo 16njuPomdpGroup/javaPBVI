@@ -3,6 +3,11 @@ package pomdp.utilities;
 import java.io.Serializable;
 import java.util.Map;
 
+/**
+ * 数值对
+ * @param <K> 第一个数值
+ * @param <V> 第二个数值
+ */
 public class Pair<K,V> implements Map.Entry<K,V>, Serializable{
 
 	private static final long serialVersionUID = 1L;

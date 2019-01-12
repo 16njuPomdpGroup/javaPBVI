@@ -17,6 +17,13 @@ import java.util.Map.Entry;
  * To change the template for this generated type comment go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
+/**
+ * 一个以表格形式表示的函数
+ * 有三种形式：
+ * R->R         用于立即回报
+ * R×R->R      用于回报函数R（s, a）
+ * R×R×R->R   用于观察函数O(a, s', o)，转移函数T(s, a, s')
+ */
 public class TabularFunction extends Function{
 
 	private static final long serialVersionUID = 1L;

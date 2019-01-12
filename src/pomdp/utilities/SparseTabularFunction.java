@@ -6,6 +6,13 @@ import java.util.Map.Entry;
 
 import pomdp.utilities.datastructures.Function;
 
+/**
+ * 一个以表格形式表示的函数，且这个表格是稀疏的
+ * 有三种形式：
+ * R->R         用于立即回报
+ * R×R->R      用于回报函数R（s, a）
+ * R×R×R->R   用于观察函数O(a, s', o)，转移函数T(s, a, s')
+ */
 public class SparseTabularFunction extends Function {
 
 	private static final long serialVersionUID = 1L;
@@ -55,6 +62,11 @@ public class SparseTabularFunction extends Function {
 		return dValue.doubleValue();
 	}
 
+	/**
+	 * R->R
+	 * @param arg1 自变量1
+	 * @param dValue 因变量
+	 */
 	public void setValue( int arg1, double dValue ){
 		if( dValue > m_dMaxValue )
 			m_dMaxValue = dValue;
@@ -68,6 +80,12 @@ public class SparseTabularFunction extends Function {
 		}
 	}
 
+	/**
+	 * R×R->R
+	 * @param arg1 自变量1
+	 * @param arg2 自变量2
+	 * @param dValue 因变量
+	 */
 	public void setValue( int arg1, int arg2, double dValue ){
 		if( dValue > m_dMaxValue )
 			m_dMaxValue = dValue;
@@ -83,6 +101,13 @@ public class SparseTabularFunction extends Function {
 	
 	/**
 	 * 用于Transition Function的一个转换的设置 参数：iStartState, iActionIdx, iEndState, dValue)
+	 */
+	/**
+	 * R×R×R->R
+	 * @param arg1 自变量1
+	 * @param arg2 自变量2
+	 * @param arg3 自变量3
+	 * @param dValue 因变量
 	 */
 	public void setValue( int arg1, int arg2, int arg3, double dValue ){
 		

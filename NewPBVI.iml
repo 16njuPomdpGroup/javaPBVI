@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/lib/ant-javafx.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/lib/dt.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/lib/javafx-doclet.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/lib/javafx-mx.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/lib/jconsole.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/lib/sa-jdi.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/lib/tools.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derby.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyclient.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_cs.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_de_DE.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_es.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_fr.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_hu.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_it.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_ja_JP.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_ko_KR.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_pl.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_pt_BR.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_ru.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_zh_CN.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_zh_TW.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbynet.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyrun.jar" />
+    <libelement value="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbytools.jar" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="ant-javafx.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/lib/ant-javafx.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="dt.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/lib/dt.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javafx-doclet.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/lib/javafx-doclet.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javafx-mx.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/lib/javafx-mx.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jconsole.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/lib/jconsole.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="sa-jdi.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/lib/sa-jdi.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="tools.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/lib/tools.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derby.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derby.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyclient.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyclient.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_cs.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_cs.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_de_DE.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_de_DE.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_es.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_es.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_fr.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_fr.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_hu.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_hu.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_it.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_it.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_ja_JP.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_ja_JP.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_ko_KR.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_ko_KR.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_pl.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_pl.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_pt_BR.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_pt_BR.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_ru.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_ru.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_zh_CN.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_zh_CN.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyLocale_zh_TW.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_zh_TW.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbynet.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbynet.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbyrun.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyrun.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="derbytools.jar">
+        <CLASSES>
+          <root url="file://D:/Program Files/Java/jdk1.7.0_45/db/lib/derbytools.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="inheritedJdk" />
+  </component>
+</module>

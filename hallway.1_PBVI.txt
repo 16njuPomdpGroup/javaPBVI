@@ -1,0 +1,49 @@
+Init value function to min
+Min R value = 0.0 init value = 0.0
+Begin blind policy computation  5 actions
+Done action 0 after 1 iterations |V| = 1
+Done action 1 after 2 iterations |V| = 1
+Done action 2 after 1 iterations |V| = 1
+Done action 3 after 1 iterations |V| = 1
+Done action 4 after 1 iterations |V| = 1
+Done blind policy
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.031, stdev 0.16302
+PBVI: Iteration 0, |Vn| = 2 |B| = 1 simulated ADR 0.030615159516405237 
+
+Expanding belief space
+Expanded belief space - |B| = 2
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.203, stdev 0.29141
+PBVI: Iteration 1, |Vn| = 3 |B| = 2 simulated ADR 0.2030075004033246 
+
+Expanding belief space
+Expanded belief space - |B| = 4
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.165, stdev 0.26921
+PBVI: Iteration 2, |Vn| = 6 |B| = 4 simulated ADR 0.16494617950468451 
+
+Expanding belief space
+Expanded belief space - |B| = 8
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.329, stdev 0.31518
+PBVI: Iteration 3, |Vn| = 11 |B| = 8 simulated ADR 0.328623379708913 
+
+Expanding belief space
+Expanded belief space - |B| = 16
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.452, stdev 0.2298
+PBVI: Iteration 4, |Vn| = 25 |B| = 16 simulated ADR 0.45209717296925805 
+
+Expanding belief space
+Expanded belief space - |B| = 32
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.513, stdev 0.1997
+PBVI: Iteration 5, |Vn| = 55 |B| = 32 simulated ADR 0.5129313662270661 
+
+Expanding belief space
+Expanded belief space - |B| = 64
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.481, stdev 0.1954
+PBVI: Iteration 6, |Vn| = 115 |B| = 64 simulated ADR 0.48139628306975984 
+
+Expanding belief space
+Expanded belief space - |B| = 128
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.491, stdev 0.18991
+PBVI: Iteration 7, |Vn| = 231 |B| = 128 simulated ADR 0.49088917242414887 
+
+Expanding belief space
+Expanded belief space - |B| = 228

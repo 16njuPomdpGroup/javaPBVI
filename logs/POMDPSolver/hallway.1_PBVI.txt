@@ -1,0 +1,8 @@
+Started loading model Models/hallway.1.POMDP
+|S| = 61|A| = 5|O| = 21
+Model file corrupted - needed to fix some transition values
+Done loading model
+
+max is 1.0 min is 0.0
+0.017865
+POMDP:computeAverageDiscountedReward:After 2 tests. ADR 0.0, stdev 0.0

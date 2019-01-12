@@ -1,0 +1,53 @@
+Init value function to min
+Min R value = -100.0 init value = -1999.9999999999982
+Begin blind policy computation  4 actions
+.............Done action 0 after 136 iterations |V| = 1
+.............Done action 1 after 136 iterations |V| = 2
+.............Done action 2 after 136 iterations |V| = 3
+.............Done action 3 after 136 iterations |V| = 4
+Done blind policy
+POMDP:computeAverageDiscountedReward:After 51 tests. ADR 0.0, stdev 0.0
+PBVI: Iteration 0, |Vn| = 4 |B| = 1 simulated ADR 0.0 
+
+Expanding belief space
+Expanded belief space - |B| = 2
+POMDP:computeAverageDiscountedReward:After 51 tests. ADR 0.0, stdev 0.0
+PBVI: Iteration 1, |Vn| = 6 |B| = 2 simulated ADR 0.0 
+
+Expanding belief space
+Expanded belief space - |B| = 4
+POMDP:computeAverageDiscountedReward:After 51 tests. ADR 0.0, stdev 0.0
+PBVI: Iteration 2, |Vn| = 10 |B| = 4 simulated ADR 0.0 
+
+Expanding belief space
+Expanded belief space - |B| = 8
+POMDP:computeAverageDiscountedReward:After 51 tests. ADR 0.0, stdev 0.0
+PBVI: Iteration 3, |Vn| = 18 |B| = 8 simulated ADR 0.0 
+
+Expanding belief space
+Expanded belief space - |B| = 16
+POMDP:computeAverageDiscountedReward:After 51 tests. ADR 0.0, stdev 0.0
+PBVI: Iteration 4, |Vn| = 34 |B| = 16 simulated ADR 0.0 
+
+Expanding belief space
+Expanded belief space - |B| = 32
+POMDP:computeAverageDiscountedReward:After 51 tests. ADR 0.0, stdev 0.0
+PBVI: Iteration 5, |Vn| = 66 |B| = 32 simulated ADR 0.0 
+
+Expanding belief space
+Expanded belief space - |B| = 64
+POMDP:computeAverageDiscountedReward:After 51 tests. ADR 0.0, stdev 0.0
+PBVI: Iteration 6, |Vn| = 130 |B| = 64 simulated ADR 0.0 
+
+Expanding belief space
+Expanded belief space - |B| = 128
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 1.038, stdev 2.17303
+PBVI: Iteration 7, |Vn| = 255 |B| = 128 simulated ADR 1.038003288395312 
+
+Expanding belief space
+Expanded belief space - |B| = 228
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 1.834, stdev 2.56225
+PBVI: Iteration 8, |Vn| = 476 |B| = 228 simulated ADR 1.8343925978935776 
+
+Expanding belief space
+Expanded belief space - |B| = 328

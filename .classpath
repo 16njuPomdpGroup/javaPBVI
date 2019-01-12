@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/lib/ant-javafx.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/lib/dt.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/lib/javafx-doclet.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/lib/javafx-mx.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/lib/jconsole.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/lib/sa-jdi.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/lib/tools.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derby.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyclient.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_cs.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_de_DE.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_es.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_fr.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_hu.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_it.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_ja_JP.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_ko_KR.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_pl.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_pt_BR.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_ru.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_zh_CN.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyLocale_zh_TW.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbynet.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbyrun.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.7.0_45/db/lib/derbytools.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,29 @@
+Init value function to min
+Min R value = 0.0 init value = 0.0
+Begin blind policy computation  5 actions
+Done action 0 after 2 iterations |V| = 1
+Done action 1 after 3 iterations |V| = 1
+Done action 2 after 2 iterations |V| = 1
+Done action 3 after 2 iterations |V| = 1
+Done action 4 after 2 iterations |V| = 1
+Done blind policy
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.028, stdev 0.14398
+PBVI: Iteration 0, |Vn| = 2 |B| = 1 simulated ADR 0.027578410514151434 
+
+Expanding belief space
+Expanded belief space - |B| = 2
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.029, stdev 0.15248
+PBVI: Iteration 1, |Vn| = 4 |B| = 2 simulated ADR 0.029413978669168405 
+
+Expanding belief space
+Expanded belief space - |B| = 4
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.152, stdev 0.24466
+PBVI: Iteration 2, |Vn| = 8 |B| = 4 simulated ADR 0.1522193100966774 
+
+Expanding belief space
+Expanded belief space - |B| = 8
+POMDP:computeAverageDiscountedReward:After 500 tests. ADR 0.257, stdev 0.26788
+PBVI: Iteration 3, |Vn| = 15 |B| = 8 simulated ADR 0.2569790124199695 
+
+Expanding belief space
+Expanded belief space - |B| = 16

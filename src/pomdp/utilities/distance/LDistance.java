@@ -6,6 +6,9 @@ import java.util.TreeMap;
 
 import pomdp.utilities.BeliefState;
 
+/**
+ * 计算两个信念状态点之间的距离，1范数的形式
+ */
 public abstract class LDistance implements DistanceMetric
 {
 	protected TreeMap<?, ?> m_tmCache;
@@ -31,9 +34,13 @@ public abstract class LDistance implements DistanceMetric
 		}
 		else
 		{
+			/*
+			itFirstNonZero为信念状态bs1中，所有概率值不为零的状态
+			itSecondNonZero为信念状态bs2中，所有概率值不为零的状态
+			 */
 			Iterator<Entry<Integer, Double>> itFirstNonZero = bs1.getNonZeroEntries().iterator();
 			Iterator<Entry<Integer, Double>> itSecondNonZero = bs2.getNonZeroEntries().iterator();
-			
+
 			int iState1 = -1, iState2 = -1;
 			
 			double dValue1 = 0.0, dValue2 = 0.0;
@@ -47,7 +54,10 @@ public abstract class LDistance implements DistanceMetric
 				if( iState1 == iState2 )
 				{					
 					dDistance = applyDistanceMetric( dDistance, dValue1, dValue2 );//dDistance+Math.abs(dValue1, dValue2)
-					
+
+					/*
+					获得信度状态中下一个状态分量所对应的概率值
+					 */
 					b = new Belief(itFirstNonZero);
 					iState1 = b.iState;
 					dValue1 = b.dValue;

@@ -68,8 +68,8 @@ public abstract class AlphaVector implements Serializable{
 
 	/**
 	 * 判断输入的向量是否是统治向量
-	 * @param avOther
-	 * @return
+	 * @param avOther 输入的向量
+	 * @return 输入的向量是否是统治向量
 	 */
 	public boolean dominates(AlphaVector avOther){
 		if( getMaxValue() < avOther.getMaxValue() )//最大值小
@@ -183,7 +183,14 @@ public abstract class AlphaVector implements Serializable{
 		
 		return avCopy;
 	}
-	
+
+	/**
+	 * 对点进行贝尔曼更新时 求在确定动作和观察的情况下的新向量α^a,o
+	 * 如果缓冲m_aCachedG中有新向量，则从缓冲中返回；否则计算新向量并将其保存到缓存m_aCachedG中
+	 * @param iAction 动作a
+	 * @param iObservation 观察o
+	 * @return 新向量α^a,o
+	 */
 	public AlphaVector G( int iAction, int iObservation ){
 		if( s_bAllowCaching && ( m_aCachedG[iAction][iObservation] != null ) )
 			return m_aCachedG[iAction][iObservation];
@@ -193,7 +200,14 @@ public abstract class AlphaVector implements Serializable{
 			m_aCachedG[iAction][iObservation] = avResult;
 		return avResult;
 	}
-	
+
+	/**
+	 * 对点进行贝尔曼更新时 求在确定动作和观察的情况下的新向量α^a,o
+	 * （综述中公式32）
+	 * @param iAction 动作a
+	 * @param iObservation 观察o
+	 * @return 新向量α^a,o
+	 */
 	protected synchronized AlphaVector computeG( int iAction, int iObservation ){
 		int iStartState = 0, iEndState = 0;
 		double dObservation = 0.0, dTr = 0.0, dValue = 0.0, dSum = 0.0;
@@ -210,11 +224,11 @@ public abstract class AlphaVector implements Serializable{
 			
 			while( itNonZeroEntries.hasNext() ){
 				eValue = itNonZeroEntries.next();
-				iEndState = eValue.getKey();
-				dValue = valueAt( iEndState );
-				dTr = eValue.getValue();//概率
+				iEndState = eValue.getKey();//结束状态s'
+				dValue = valueAt( iEndState );//结束状态投影到当前向量的值α(s')
+				dTr = eValue.getValue();//转移概率
 				if( dValue != 0 ){
-					dObservation = m_pPOMDP.O( iAction, iEndState, iObservation );
+					dObservation = m_pPOMDP.O( iAction, iEndState, iObservation ); //观察到iObservation的概率
 					dSum += dObservation * dTr * dValue;
 				}
 			}

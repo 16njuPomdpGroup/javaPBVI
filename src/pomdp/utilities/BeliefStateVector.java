@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Vector;
 
+/**
+ * 创建一个信念状态的生成树
+ * 结构与二维数组相类似，有一个数组存不同的层，每一层存在该层的所有元素
+ * @param <E>
+ */
 public class BeliefStateVector<E> extends Vector<E> 
 {
 	private static final long serialVersionUID = 1L;

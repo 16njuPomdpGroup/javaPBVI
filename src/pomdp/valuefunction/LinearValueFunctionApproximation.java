@@ -23,6 +23,9 @@ import pomdp.utilities.BeliefState;
 import pomdp.utilities.RandomGenerator;
 import pomdp.utilities.datastructures.LinkedList;
 
+/**
+ * 用于表示值函数的向量集合V
+ */
 public class LinearValueFunctionApproximation extends PolicyStrategy implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -54,7 +57,12 @@ public class LinearValueFunctionApproximation extends PolicyStrategy implements 
 	public AlphaVector getLast() {
 		return m_vAlphaVectors.getLast();
 	}
-	
+
+	/**
+	 * 根据当前的值函数获得在信念状态bs上最好的动作
+	 * @param bs 信念状态bs
+	 * @return 动作对应的下标
+	 */
 	public int getBestAction( BeliefState bs ){
 		AlphaVector avMaxAlpha = getMaxAlpha( bs );
 		if( avMaxAlpha == null )
@@ -69,7 +77,12 @@ public class LinearValueFunctionApproximation extends PolicyStrategy implements 
 	public void add( AlphaVector avNew ){
 		add( avNew, false );
 	}
-	
+
+	/**
+	 * 向向量集合中添加向量
+	 * @param avNew 新的向量
+	 * @param bPruneDominated 是否要把处处被新向量统治的原有向量删除
+	 */
 	public void add( AlphaVector avNew, boolean bPruneDominated ){
 		AlphaVector avExisting = null;
 		BeliefState bsWitness = null;
@@ -133,7 +146,12 @@ public class LinearValueFunctionApproximation extends PolicyStrategy implements 
 		StreamResult result = new StreamResult( new FileOutputStream( sFileName ) );
 		transformer.transform( source, result );
 	}
-	
+
+	/**
+	 * 找到信念状态bs上的统治向量
+	 * @param bs 信念状态bs
+	 * @return 信念状态bs上的统治向量
+	 */
 	public AlphaVector getMaxAlpha( BeliefState bs ){
 		AlphaVector avMaxAlpha = null;
 		double maxValue = Double.NEGATIVE_INFINITY;//先把maxValue初始化为负无穷
@@ -158,7 +176,13 @@ public class LinearValueFunctionApproximation extends PolicyStrategy implements 
 		}
 		return avMaxAlpha;
 	}
-	
+
+	/**
+	 * 向向量集合中添加向量
+	 * 并把处处被新向量统治的原有向量删除
+	 * @param avNew 新向量
+	 * @return 新向量是否加入到向量集合中
+	 */
 	public boolean addPrunePointwiseDominated( AlphaVector avNew ){
 		Iterator<AlphaVector> iter = m_vAlphaVectors.iterator();
 		while(iter.hasNext())//遍历值函数中的向量

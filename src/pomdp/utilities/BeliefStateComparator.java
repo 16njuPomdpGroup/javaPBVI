@@ -31,12 +31,17 @@ public class BeliefStateComparator implements Comparator<BeliefState> {
 	public int compare( BeliefState bs1, BeliefState bs2 ){
 					
 		//Non deterministic belief states
+		/*
+		itFirstNonZero为信念状态bs1中，所有概率值不为零的状态
+		itSecondNonZero为信念状态bs2中，所有概率值不为零的状态
+		 */
 		Iterator<Entry<Integer, Double>> itFirstNonZero = bs1.getNonZeroEntries().iterator();
 		Iterator<Entry<Integer, Double>> itSecondNonZero = bs2.getNonZeroEntries().iterator();
 		int iState1 = -1, iState2 = -1;
 		double dValue1 = 0.0, dValue2 = 0.0;
 		Belief b = null;
-				
+
+
 		while( ( iState1 < Integer.MAX_VALUE ) || ( iState2 < Integer.MAX_VALUE ) ){
 			if( iState1 == iState2 ){
 				if( Math.abs( dValue1 - dValue2 ) > m_dEpsilon ){
@@ -71,6 +76,9 @@ public class BeliefStateComparator implements Comparator<BeliefState> {
 		return 0;
 	}
 
+	/**
+	 * （状态，概率值）
+	 */
 	public class Belief{
 		public int iState;
 		public double dValue;

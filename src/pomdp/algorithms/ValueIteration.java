@@ -92,7 +92,16 @@ public abstract class ValueIteration extends PolicyStrategy{
 	}
 	
 	public abstract void valueIteration(int cMaxSteps, double dEpsilon, double dTargetValue);
-	
+
+	/**
+	 * 找到在当前信念点bs下执行动作iAction后，所有观察所对应的向量以及信念点bs投影的最大值
+	 * @param iAction 动作
+	 * @param bs 信念点
+	 * @param vValueFunction 值函数
+	 * @param aNext 所有观察所对应的向量，输入时为空
+	 * @return 所有观察所对应的向量
+	 * @return 信念点bs投影的最大值
+	 */
 	private double findMaxAlphas( int iAction, BeliefState bs, LinearValueFunctionApproximation vValueFunction, AlphaVector[] aNext ) {
 		AlphaVector avAlpha = null;
 		int iObservation = 0;
@@ -158,7 +167,13 @@ public abstract class ValueIteration extends PolicyStrategy{
 		
 		return  backupTauBased( bs, vValueFunction);
 	}
-	
+
+	/**
+	 * backup(V, b)操作
+	 * @param bs 要更新的信念点b
+	 * @param vValueFunction 值函数集合V
+	 * @return 这个信念点b所对应的新α向量
+	 */
 	protected AlphaVector backupTauBased( BeliefState bs, LinearValueFunctionApproximation vValueFunction){
 		double dValue = 0.0, dMaxValue = Double.NEGATIVE_INFINITY;
 		int iAction = 0, iMaxAction = -1;

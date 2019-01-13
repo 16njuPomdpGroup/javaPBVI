@@ -32,7 +32,13 @@ public class PointBasedValueIteration extends ValueIteration
 		m_itCurrentIterationPoints = null;
 		m_bRandomizedActions = bRandomizedActionExpansion;
 	}
-	
+
+	/**
+	 * 扩充点集B
+	 * 从扩充后B中随机取个b，在它的后继中找离点集B最远的
+	 * @param vBeliefPoints 原点集
+	 * @return 扩充后点集
+	 */
 	public BeliefStateVector<BeliefState> expandPBVI(BeliefStateVector<BeliefState> vBeliefPoints)
 	{
 		//扩充后的B，原先的B中内容已经在这里
@@ -74,9 +80,19 @@ public class PointBasedValueIteration extends ValueIteration
     	return vExpanded;
 	}
 
-	
+	/**
+	 * PBVI的值迭代
+	 * 1. 扩张点集
+	 * 2. 执行backup操作，提升值函数
+	 * @param cIteration 最大迭代次数
+	 * @param dEpsilon 误差值
+	 * @param dTargetValue 想要达到的平均折扣回报值，ADR：average discounted reward
+	 */
 	public void valueIteration(int cIteration, double dEpsilon,
 			double dTargetValue) {
+		/*
+		创建一个信念状态的生成树，并初始化（把初始初始信念点加入生成树中）
+		 */
 		//maxRunningTime和numEvaluations没有用到  应该删除
 		BeliefStateVector<BeliefState> vBeliefPoints = new BeliefStateVector<BeliefState>();
 		vBeliefPoints.add(null, m_pPOMDP.getBeliefStateFactory().getInitialBeliefState() );//初始化信念点
@@ -84,6 +100,9 @@ public class PointBasedValueIteration extends ValueIteration
 		boolean done = false;//终止条件  点集不再变化或者ADR收敛
 		for(int iIteration = 0; iIteration < cIteration && !done; ++iIteration)
 		{
+			/*
+			1. 扩张点集
+			 */
 			if(iIteration > 0)
 			{
 				Logger.getInstance().logln( "Expanding belief space" );
@@ -98,9 +117,15 @@ public class PointBasedValueIteration extends ValueIteration
 					done = true;
 				}
 			}
-			
+
+			/*
+			2. 执行backup操作，提升值函数
+			 */
 			improveValueFunction(vBeliefPoints);
 			Pair<Double, Double> pComputedADRs = new Pair<Double, Double>(new Double(0.0), new Double(0.0));
+			/*
+			如果点集不在变化或平均折扣回报值已经收敛，则迭代结束
+			 */
 			done = done || checkADRConvergence( m_pPOMDP, dTargetValue, pComputedADRs );//ADR收敛
 			
 			Logger.getInstance().logln( 
@@ -112,7 +137,12 @@ public class PointBasedValueIteration extends ValueIteration
 			Logger.getInstance().logln();
 		}
 	}
-	
+
+	/**
+	 * 更新值函数
+	 * 从生成树的最底层开始，往上对层中的所有信念点执行backup操作，更新值函数
+	 * @param vBeliefState 信念状态的生成树
+	 */
 	public void improveValueFunction(BeliefStateVector<BeliefState> vBeliefState)
 	{
 		ArrayList<ArrayList<BeliefState>> treeLevel = vBeliefState.getTreeLevelInfo();
@@ -140,6 +170,13 @@ public class PointBasedValueIteration extends ValueIteration
 		}
 	}
 
+	/**
+	 * 判断计算出的平均折扣回报值是否收敛
+	 * @param pomdp 模型
+	 * @param dTargetADR 想要达到的平均折扣回报值
+	 * @param pComputedADRs 计算出的平均折扣回报值
+	 * @return 是否收敛
+	 */
 	protected boolean checkADRConvergence( POMDP pomdp, double dTargetADR, Pair<Double,Double> pComputedADRs ){
 		double dSimulatedADR = 0.0;
 		boolean bConverged = false;

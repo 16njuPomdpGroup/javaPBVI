@@ -124,10 +124,10 @@ public abstract class BeliefState extends PriorityQueueElement implements Serial
 
 	
 	/**
-	 * 计算出下一个信念点
-	 * @param iAction
-	 * @param iObservation
-	 * @return
+	 * 计算出this这个信念点的下一个信念点
+	 * @param iAction 行动
+	 * @param iObservation 观察
+	 * @return 下一个信念点
 	 */
 	public synchronized BeliefState nextBeliefState( int iAction, int iObservation ){
 		BeliefState bsNext = null;

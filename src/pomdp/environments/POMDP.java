@@ -408,6 +408,13 @@ public class POMDP implements Serializable {
 		return iObservation;
 	}
 
+	/**
+	 * 在策略存在的情况下计算平均的带折扣的回报值
+	 * @param cTests 模拟次数
+	 * @param cMaxStepsToGoal 每次模拟执行的步数
+	 * @param policy 策略
+	 * @return 回报值
+	 */
 	public double computeAverageDiscountedReward(int cTests,
 			int cMaxStepsToGoal, PolicyStrategy policy) {
 		return computeAverageDiscountedReward(cTests, cMaxStepsToGoal, policy,
@@ -431,6 +438,9 @@ public class POMDP implements Serializable {
 		//m_cSteps = 0;
 		// 计算cTests次模拟折扣回报，然后计算平均值
 		for (iTest = 0; (iTest < cTests) && (dStandardError > 0.01 * dADR); iTest++) {
+			/*
+			计算出折扣回报 R + γ·R + γ^2·R + γ^3·R + ...
+			 */
 			dDiscountedReward = computeDiscountedReward(cMaxStepsToGoal,
 					policy, aiActionCount);// 记录计算出本次模拟的折扣回报值
 			dSumSquares += (dDiscountedReward * dDiscountedReward);// 记录计算出模拟的回报值平方和
@@ -488,6 +498,7 @@ public class POMDP implements Serializable {
 
 	/**
 	 * 模拟执行cMaxStepsToGoal步，按指定的策略和起始状态概率及各种函数，计算出折扣回报 R + yR + y2R + y3R + ...
+	 * 如果找不到下一信念状态 或 在下一信念状态的下一状态分量为0 或 当前状态与下一状态相同的次数超过10次, 则不再继续执行
 	 * 
 	 * @param cMaxStepsToGoal
 	 * @param policy
@@ -564,6 +575,10 @@ public class POMDP implements Serializable {
 				cSameStates = 0;
 			else
 				cSameStates++;
+			/*
+			如果找不到下一信念状态 或 在下一信念状态的下一状态分量为0 或 当前状态与下一状态相同的次数超过10次，
+			则不再继续执行
+			 */
 			if (bsNext == null || (bsNext.valueAt(iNextState) == 0)
 					|| (cSameStates > 10)) {
 				bDone = true;

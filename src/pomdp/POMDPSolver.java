@@ -7,6 +7,11 @@ import pomdp.utilities.Logger;
 
 public class POMDPSolver {
 
+	/**
+	 * 1. 载入模型
+	 * 2. 随机策略模拟
+	 * 3. 使用PBVI进行值迭代获得策略：viAlgorithm.valueIteration
+	 */
 	public static void main(String[] args) {
 		String sPath = "Models/";// 得到model路径
 		String sModelName = "hallway";// model名
@@ -21,12 +26,15 @@ public class POMDPSolver {
 			System.err.println(e);
 		}
 
+		/*
+		1. 载入模型
+		 */
 		POMDP pomdp = null;
 		double dTargetADR = 100.0;// 目标平均折扣回报值，控制结束条件
 		try {
 			pomdp = new POMDP();
 			pomdp.load(sPath + sModelName + ".POMDP");// 载入pomdp模型
-			
+
 			//输出最大回报值和最小回报值
     	    Logger.getInstance().logln("max is " + pomdp.getMaxR() + " min is " + pomdp.getMinR());
 		} catch (Exception e) {
@@ -34,6 +42,9 @@ public class POMDPSolver {
 			e.printStackTrace();
 			System.exit(0);
 		}
+		/*
+		2.
+		 */
 		// 随机策略模拟，计算平均回报值
 		pomdp.computeAverageDiscountedReward(2, 100,new RandomWalkPolicy(pomdp.getActionCount()));
 		
@@ -45,11 +56,14 @@ public class POMDPSolver {
     	{
     		System.err.println(e);
     	}
-		
+
 		//做了blind policy，获得PointBasedValueIteration
     	ValueIteration viAlgorithm = new PointBasedValueIteration(pomdp);
     	
     	int cMaxIterations = 400;
+    	/*
+		3. 使用PBVI进行值迭代获得策略
+		 */
     	try
     	{
     		/* run POMDP solver */
